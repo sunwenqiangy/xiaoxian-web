@@ -1,0 +1,209 @@
+.modal-backdrop {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  display: grid;
+  padding: 22px;
+  overflow-y: auto;
+  background: rgba(2, 11, 17, 0.76);
+  place-items: center;
+}
+.inquiry-modal {
+  width: min(690px, 100%);
+  max-height: min(830px, calc(100dvh - 44px));
+  padding: 28px;
+  overflow-y: auto;
+  border-radius: 21px;
+}
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+.modal-title {
+  margin: 0;
+  font-size: 29px;
+}
+.modal-desc {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.modal-close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: #dcefe9;
+  background: rgba(255, 255, 255, 0.04);
+  place-items: center;
+}
+.modal-close svg {
+  width: 19px;
+}
+.inquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  margin-top: 25px;
+}
+.field {
+  display: grid;
+  gap: 7px;
+}
+.field--full {
+  grid-column: 1 / -1;
+}
+.field label {
+  color: #dff0ea;
+  font-size: 13px;
+  font-weight: 700;
+}
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(145, 205, 221, 0.26);
+  border-radius: 10px;
+  outline: none;
+  color: #f4fffb;
+  background: rgba(4, 19, 29, 0.52);
+}
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(67, 215, 220, 0.12);
+}
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f4fffb;
+  -webkit-box-shadow: 0 0 0 1000px #0a2331 inset;
+  caret-color: #f4fffb;
+  transition: background-color 9999s ease-out 0s;
+}
+.field.has-error input,
+.field.has-error textarea,
+.consent.has-error input {
+  border-color: var(--coral);
+}
+.field.has-error input:focus,
+.field.has-error textarea:focus {
+  box-shadow: 0 0 0 3px rgba(239, 158, 130, 0.15);
+}
+.field-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #ffb19b;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+.form-error-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 13px;
+  border: 1px solid rgba(239, 158, 130, 0.48);
+  border-radius: 10px;
+  color: #ffd5c9;
+  background: rgba(239, 158, 130, 0.1);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.form-error-summary strong {
+  color: #ffb19b;
+}
+.turnstile {
+  min-height: 65px;
+}
+.form-footer {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.form-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.form-status.is-error {
+  color: #ffb19b;
+}
+.form-note {
+  grid-column: 1 / -1;
+  margin: -3px 0 0;
+  color: #91afb1;
+  font-size: 12px;
+}
+.form-note a {
+  color: var(--jade);
+  text-decoration: underline;
+}
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #c6dddb;
+  font-size: 12px;
+}
+.consent input {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--jade);
+}
+.website-trap {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.submission-success {
+  display: grid;
+  justify-items: center;
+  padding: 31px 10px 12px;
+  text-align: center;
+}
+.success-mark {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(139, 224, 189, 0.65);
+  border-radius: 50%;
+  color: var(--jade);
+  background: rgba(139, 224, 189, 0.1);
+  font-size: 30px;
+  place-items: center;
+}
+.submission-success h2 {
+  margin: 21px 0 7px;
+  font-family: var(--serif);
+  font-size: 31px;
+}
+.submission-success p {
+  max-width: 430px;
+  margin: 0;
+  color: var(--muted);
+}
+.submission-success .submission-id {
+  margin-top: 13px;
+  color: #d7ece6;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.submission-success .button {
+  margin-top: 25px;
+}
